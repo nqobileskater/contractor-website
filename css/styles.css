@@ -45,6 +45,7 @@ nav ul li a {
   position: relative;
   height: 400px;
   overflow: hidden;
+  transition: background-image 1s ease-in-out; 
 }
 
 .hero::before {

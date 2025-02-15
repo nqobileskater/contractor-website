@@ -11,7 +11,12 @@ body {
 
 main {
   flex: 1; /* Allow the main content to grow and fill the remaining space */
-} /* Added missing closing brace */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
 
 header {
   background: #333;
@@ -50,8 +55,13 @@ nav ul li a {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 400px;
-  overflow: hidden;
+  height: 100%; /* Fill the available space */
+  width: 100%; /* Fill the available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
 }
 
 .slideshow {
@@ -80,8 +90,6 @@ nav ul li a {
   position: relative;
   z-index: 2;
   color: #fff;
-  text-align: center;
-  padding-top: 100px;
 }
 
 .hero h1 {
@@ -108,119 +116,4 @@ footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: auto; /* Push the footer to the bottom */
-}
-
-/* About Page */
-.about {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.team {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.team-member {
-  text-align: center;
-}
-
-.team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-/* Services Page */
-.services {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-list {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.service-item {
-  text-align: center;
-  width: 30%;
-}
-
-/* Projects Page */
-.projects {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.project-gallery {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.project-item {
-  text-align: center;
-}
-
-.project-item img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-}
-
-/* Testimonials Page */
-.testimonials {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.testimonial-list {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.testimonial-item {
-  text-align: center;
-  width: 45%;
-}
-
-/* Contact Page */
-.contact {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact form label {
-  margin-top: 10px;
-}
-
-.contact form input, .contact form textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact form button {
-  background: #ff6f61;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  margin-top: 20px;
-  cursor: pointer;
 }

@@ -1,5 +1,5 @@
 // Hero Section Slideshow
-const hero = document.querySelector('.hero');
+const slideshow = document.querySelector('.slideshow');
 const images = [
   'url("images/hero1.jpg")',
   'url("images/hero2.jpg")',
@@ -8,11 +8,11 @@ const images = [
 let currentImageIndex = 0;
 
 function changeBackground() {
-  hero.style.backgroundImage = images[currentImageIndex];
+  slideshow.style.backgroundImage = images[currentImageIndex];
   currentImageIndex = (currentImageIndex + 1) % images.length;
 }
 
-// Change background every 3 seconds
+// Change background every 3 seconds (3000 milliseconds)
 setInterval(changeBackground, 3000);
 
 // Set the initial background

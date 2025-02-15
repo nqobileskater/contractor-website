@@ -41,15 +41,14 @@ nav ul li a {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
   position: relative;
   height: 400px;
   overflow: hidden;
-  transition: background-image 1s ease-in-out; 
 }
 
-.hero::before {
-  content: '';
+.slideshow {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,6 +56,7 @@ nav ul li a {
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
   z-index: 1;
+  transition: background-image 0.5s ease-in-out; /* Faster transition */
 }
 
 .hero-content {
@@ -83,40 +83,6 @@ nav ul li a {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-}
-
-/* Slideshow Animation */
-@keyframes slideshow {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  20% { opacity: 1; }
-  30% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-.hero {
-  animation: slideshow 12s infinite; /* Adjust timing based on the number of images */
-}
-
-.hero:nth-of-type(1) {
-  background: url('../images/hero1.jpg') no-repeat center center/cover;
-}
-
-.hero:nth-of-type(2) {
-  background: url('../images/hero2.jpg') no-repeat center center/cover;
-}
-
-.hero:nth-of-type(3) {
-  background: url('../images/hero3.jpg') no-repeat center center/cover;
-}
-
-.cta-button {
-  background: #ff6f61;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
 }
 
 footer {

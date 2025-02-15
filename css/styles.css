@@ -11,6 +11,7 @@ body {
 
 main {
   flex: 1; /* Allow the main content to grow and fill the remaining space */
+} /* Added missing closing brace */
 
 header {
   background: #333;
@@ -106,7 +107,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-   margin-top: auto; /* Push the footer to the bottom */
+  margin-top: auto; /* Push the footer to the bottom */
 }
 
 /* About Page */

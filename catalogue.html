@@ -28,7 +28,13 @@
       <div class="catalogue-container">
         <!-- Catalogue Item 1 -->
         <div class="catalogue-item">
-          <img src="images/project1.jpg" alt="Driveway Paving">
+          <div class="image-carousel">
+            <img src="images/project1-1.jpg" alt="Driveway Paving 1" class="active">
+            <img src="images/project1-2.jpg" alt="Driveway Paving 2">
+            <img src="images/project1-3.jpg" alt="Driveway Paving 3">
+            <button class="carousel-arrow left" onclick="moveSlide(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-arrow right" onclick="moveSlide(this, 1)"><i class="fas fa-chevron-right"></i></button>
+          </div>
           <div class="catalogue-details">
             <h2>Driveway Paving</h2>
             <p class="price">R15,000</p>
@@ -42,7 +48,13 @@
 
         <!-- Catalogue Item 2 -->
         <div class="catalogue-item">
-          <img src="images/project2.jpg" alt="Sidewalk Construction">
+          <div class="image-carousel">
+            <img src="images/project2-1.jpg" alt="Sidewalk Construction 1" class="active">
+            <img src="images/project2-2.jpg" alt="Sidewalk Construction 2">
+            <img src="images/project2-3.jpg" alt="Sidewalk Construction 3">
+            <button class="carousel-arrow left" onclick="moveSlide(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-arrow right" onclick="moveSlide(this, 1)"><i class="fas fa-chevron-right"></i></button>
+          </div>
           <div class="catalogue-details">
             <h2>Sidewalk Construction</h2>
             <p class="price">R10,000</p>
@@ -56,7 +68,13 @@
 
         <!-- Catalogue Item 3 -->
         <div class="catalogue-item">
-          <img src="images/project3.jpg" alt="Patio Installation">
+          <div class="image-carousel">
+            <img src="images/project3-1.jpg" alt="Patio Installation 1" class="active">
+            <img src="images/project3-2.jpg" alt="Patio Installation 2">
+            <img src="images/project3-3.jpg" alt="Patio Installation 3">
+            <button class="carousel-arrow left" onclick="moveSlide(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-arrow right" onclick="moveSlide(this, 1)"><i class="fas fa-chevron-right"></i></button>
+          </div>
           <div class="catalogue-details">
             <h2>Patio Installation</h2>
             <p class="price">R20,000</p>
@@ -70,7 +88,13 @@
 
         <!-- Catalogue Item 4 -->
         <div class="catalogue-item">
-          <img src="images/project4.jpg" alt="Parking Lot Paving">
+          <div class="image-carousel">
+            <img src="images/project4-1.jpg" alt="Parking Lot Paving 1" class="active">
+            <img src="images/project4-2.jpg" alt="Parking Lot Paving 2">
+            <img src="images/project4-3.jpg" alt="Parking Lot Paving 3">
+            <button class="carousel-arrow left" onclick="moveSlide(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-arrow right" onclick="moveSlide(this, 1)"><i class="fas fa-chevron-right"></i></button>
+          </div>
           <div class="catalogue-details">
             <h2>Parking Lot Paving</h2>
             <p class="price">R25,000</p>
@@ -84,7 +108,13 @@
 
         <!-- Catalogue Item 5 -->
         <div class="catalogue-item">
-          <img src="images/project5.jpg" alt="Road Resurfacing">
+          <div class="image-carousel">
+            <img src="images/project5-1.jpg" alt="Road Resurfacing 1" class="active">
+            <img src="images/project5-2.jpg" alt="Road Resurfacing 2">
+            <img src="images/project5-3.jpg" alt="Road Resurfacing 3">
+            <button class="carousel-arrow left" onclick="moveSlide(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-arrow right" onclick="moveSlide(this, 1)"><i class="fas fa-chevron-right"></i></button>
+          </div>
           <div class="catalogue-details">
             <h2>Road Resurfacing</h2>
             <p class="price">R30,000</p>
@@ -98,7 +128,13 @@
 
         <!-- Catalogue Item 6 -->
         <div class="catalogue-item">
-          <img src="images/project6.jpg" alt="Garden Pathways">
+          <div class="image-carousel">
+            <img src="images/project6-1.jpg" alt="Garden Pathways 1" class="active">
+            <img src="images/project6-2.jpg" alt="Garden Pathways 2">
+            <img src="images/project6-3.jpg" alt="Garden Pathways 3">
+            <button class="carousel-arrow left" onclick="moveSlide(this, -1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-arrow right" onclick="moveSlide(this, 1)"><i class="fas fa-chevron-right"></i></button>
+          </div>
           <div class="catalogue-details">
             <h2>Garden Pathways</h2>
             <p class="price">R12,000</p>
@@ -111,6 +147,12 @@
         </div>
       </div>
     </section>
+
+    <!-- Full-Screen Image Viewer -->
+    <div id="image-viewer" class="image-viewer">
+      <span class="close-btn" onclick="closeViewer()">&times;</span>
+      <img id="full-image" src="" alt="Full Image">
+    </div>
   </main>
 
   <footer>

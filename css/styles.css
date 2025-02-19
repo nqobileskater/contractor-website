@@ -71,16 +71,19 @@ nav ul li a {
 }
 
 .hero-content {
+  background-image: url("images/hero3.jpg");
   position: relative;
   z-index: 2;
 }
 
 .hero h1 {
+  color: #333
   font-size: 3rem;
   margin-bottom: 10px;
 }
 
 .hero p {
+  color:#333
   font-size: 1.2rem;
   margin-bottom: 20px;
 }

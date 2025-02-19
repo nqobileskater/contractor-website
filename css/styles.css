@@ -49,6 +49,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
+  background-image: url("images/hero3.jpg");
   position: relative;
   height: 400px;
   overflow: hidden;
@@ -56,7 +57,6 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
 }
 
 .slideshow {
@@ -71,7 +71,6 @@ nav ul li a {
 }
 
 .hero-content {
-  background-image: url("images/hero3.jpg");
   position: relative;
   z-index: 2;
 }

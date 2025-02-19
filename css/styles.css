@@ -11,11 +11,6 @@ body {
 
 main {
   flex: 1; /* Allow the main content to grow and fill the remaining space */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text */
 }
 
 header {
@@ -55,13 +50,13 @@ nav ul li a {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100%; /* Fill the available space */
-  width: 100%; /* Fill the available space */
+  height: 400px;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 }
 
 .slideshow {
@@ -75,21 +70,9 @@ nav ul li a {
   transition: background-image 0.5s ease-in-out; /* Faster transition */
 }
 
-.slideshow::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  z-index: 1;
-}
-
 .hero-content {
   position: relative;
   z-index: 2;
-  color: #fff;
 }
 
 .hero h1 {
@@ -110,6 +93,48 @@ nav ul li a {
   border-radius: 5px;
 }
 
+/* Grid Section */
+.grid-section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.grid-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.grid-button {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Footer */
 footer {
   background: #333;
   color: #fff;

@@ -1,21 +1,24 @@
 // Image Carousel Functionality
 function moveSlide(button, direction) {
   const carousel = button.parentElement;
-  const images = carousel.querySelectorAll("img");
+  const carouselInner = carousel.querySelector(".carousel-inner");
+  const items = carouselInner.querySelectorAll(".carousel-item");
+  const totalItems = items.length;
   let activeIndex = 0;
 
-  images.forEach((img, index) => {
-    if (img.classList.contains("active")) {
+  items.forEach((item, index) => {
+    if (item.classList.contains("active")) {
       activeIndex = index;
-      img.classList.remove("active");
+      item.classList.remove("active");
     }
   });
 
   let newIndex = activeIndex + direction;
-  if (newIndex < 0) newIndex = images.length - 1;
-  if (newIndex >= images.length) newIndex = 0;
+  if (newIndex < 0) newIndex = totalItems - 1;
+  if (newIndex >= totalItems) newIndex = 0;
 
-  images[newIndex].classList.add("active");
+  items[newIndex].classList.add("active");
+  carouselInner.style.transform = `translateX(-${newIndex * 100}%)`;
 }
 
 // Full-Screen Image Viewer
@@ -32,6 +35,7 @@ function closeViewer() {
 }
 
 // Attach click event to images
-document.querySelectorAll(".image-carousel img").forEach((img) => {
+document.querySelectorAll(".carousel-item img").forEach((img) => {
   img.addEventListener("click", () => openViewer(img.src));
 });
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

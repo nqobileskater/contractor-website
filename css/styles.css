@@ -56,7 +56,8 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url("../images/hero3.jpg") no-repeat center center/cover; /* Single background image */
+  background: url("../images/hero3.jpg") repeat-x; /* Repeat horizontally */
+  background-size: 33.33% auto; /* Divide the screen into 3 equal parts */
 }
 
 .hero-content {

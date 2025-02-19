@@ -1,19 +1,37 @@
-// Hero Section Slideshow
-const slideshow = document.querySelector('.slideshow');
-const images = [
-  'url("images/hero1.jpg")',
-  'url("images/hero2.jpg")',
-  'url("images/hero3.jpg")'
-];
-let currentImageIndex = 0;
+// Image Carousel Functionality
+function moveSlide(button, direction) {
+  const carousel = button.parentElement;
+  const images = carousel.querySelectorAll("img");
+  let activeIndex = 0;
 
-function changeBackground() {
-  slideshow.style.backgroundImage = images[currentImageIndex];
-  currentImageIndex = (currentImageIndex + 1) % images.length;
+  images.forEach((img, index) => {
+    if (img.classList.contains("active")) {
+      activeIndex = index;
+      img.classList.remove("active");
+    }
+  });
+
+  let newIndex = activeIndex + direction;
+  if (newIndex < 0) newIndex = images.length - 1;
+  if (newIndex >= images.length) newIndex = 0;
+
+  images[newIndex].classList.add("active");
 }
 
-// Change background every 3 seconds (3000 milliseconds)
-setInterval(changeBackground, 3000);
+// Full-Screen Image Viewer
+function openViewer(imageSrc) {
+  const viewer = document.getElementById("image-viewer");
+  const fullImage = document.getElementById("full-image");
+  fullImage.src = imageSrc;
+  viewer.style.display = "flex";
+}
 
-// Set the initial background
-changeBackground();
+function closeViewer() {
+  const viewer = document.getElementById("image-viewer");
+  viewer.style.display = "none";
+}
+
+// Attach click event to images
+document.querySelectorAll(".image-carousel img").forEach((img) => {
+  img.addEventListener("click", () => openViewer(img.src));
+});

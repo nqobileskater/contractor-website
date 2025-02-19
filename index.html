@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,54 +8,6 @@
   <link rel="stylesheet" href="css/styles.css">
   <!-- Add Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-      body {
-          margin: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          background-color: #f2f2f2;
-          overflow: hidden;
-      }
-      .construction-site {
-          position: relative;
-          width: 300px;
-          height: 200px;
-      }
-      .crane {
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 100px;
-          height: 150px;
-          background: url('https://i.imgur.com/RH2Hk5m.png') no-repeat;
-          background-size: contain;
-          animation: moveCrane 3s infinite alternate ease-in-out;
-      }
-      .brick {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 50px;
-          height: 25px;
-          background-color: brown;
-          transform: translateX(-50%);
-          animation: dropBrick 3s infinite ease-in-out;
-      }
-      
-      @keyframes moveCrane {
-          0% { transform: translateX(-50%) translateY(0); }
-          100% { transform: translateX(-50%) translateY(20px); }
-      }
-      
-      @keyframes dropBrick {
-          0% { transform: translateX(-50%) translateY(-100px); opacity: 0; }
-          50% { opacity: 1; }
-          100% { transform: translateX(-50%) translateY(0); opacity: 1; }
-      }
-  </style>
 </head>
 <body>
   <header>
@@ -70,7 +23,7 @@
       </ul>
     </nav>
   </header>
-  
+
   <main>
     <section class="hero">
       <div class="hero-content">
@@ -79,7 +32,7 @@
         <a href="contact.html" class="cta-button">Get a Quote</a>
       </div>
     </section>
-  
+
     <!-- Grid Section -->
     <section class="grid-section">
       <div class="grid-container">
@@ -103,18 +56,12 @@
         </div>
       </div>
     </section>
-  
-    <!-- Construction Animation -->
-    <section class="construction-site">
-        <div class="crane"></div>
-        <div class="brick"></div>
-    </section>
   </main>
-  
+
   <footer>
     <p>&copy; 2023 Pavement Pros. All rights reserved.</p>
   </footer>
-  
+
   <script src="js/script.js"></script>
 </body>
 </html>

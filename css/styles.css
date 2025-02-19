@@ -148,6 +148,131 @@ nav ul li a {
   background: #ff6f61;
 }
 
+/* Sticky Header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+.sticky-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sticky-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sticky-header ul {
+  list-style: none;
+  display: flex;
+}
+
+.sticky-header ul li {
+  margin-left: 20px;
+}
+
+.sticky-header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Catalogue Section */
+.catalogue {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.catalogue h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.catalogue-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.catalogue-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalogue-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.catalogue-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.catalogue-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.catalogue-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.catalogue-details .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.catalogue-details .description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.catalogue-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.catalogue-button {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.catalogue-button:hover {
+  background: #ff6f61;
+}
+
+.catalogue-button i {
+  margin-right: 8px;
+}
+
 /* Footer */
 footer {
   background: #333;

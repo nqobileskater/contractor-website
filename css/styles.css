@@ -49,6 +49,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
+  background-image: url("images/hero3.jpg");
   position: relative;
   height: 400px;
   overflow: hidden;
@@ -66,7 +67,6 @@ nav ul li a {
   width: 100%;
   height: 100%;
   background-image: url("images/hero3.jpg");
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
   z-index: 1;
 }
 
